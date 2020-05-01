@@ -81,6 +81,16 @@ a:hover {
   transform: translateY(-2px);
 }
 
+/* Hide labels but not for screen readers */
+.footer__label {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 .footer__icon {
   fill: #ffffff;
   height: 30px;
