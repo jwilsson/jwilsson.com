@@ -1,87 +1,89 @@
 @keyframes intro {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  /* stylelint-disable selector-max-universal */
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-  /* stylelint-enable selector-max-universal */
-
-  html {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    background-color: #111111;
-    box-sizing: border-box;
-    min-height: 100%;
-    overflow-y: scroll;
-    position: relative;
-    scroll-behavior: smooth;
-    text-size-adjust: 100%;
-  }
-
-  body {
-    color: #ffffff;
-    font: 1rem/1.5 "Raleway", sans-serif;
-    margin: 0 auto;
-    width: 85%;
-  }
-
-  a {
-    color: #eb611c;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-  }
-
-  a:hover {
-    color: #ffffff;
-  }
-
-  .site-content {
-    align-items: center;
-    display: flex;
-    height: 100vh;
-    min-height: -webkit-fill-available; /* Fix for iOS 100vh bug */
-  }
-
-  .site-title {
-    animation: intro 0.5s ease-in-out 0.75s 1 normal forwards running;
-    font: 5vmax/1.2 "Patua One", serif;
-    margin: 0;
+  0% {
     opacity: 0;
-    text-transform: uppercase;
+    transform: translateY(20px);
   }
 
-  .site-footer {
-    align-items: flex-end;
-    bottom: 25px;
-    display: flex;
-    position: fixed;
-    right: 25px;
-  }
-
-  .footer__link {
+  100% {
+    opacity: 1;
     transform: translateY(0);
-    transition: transform 0.2s ease-in-out;
   }
+}
 
-  .footer__link:hover {
-    transform: translateY(-2px);
-  }
+/* stylelint-disable selector-max-universal */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+/* stylelint-enable selector-max-universal */
 
-  .footer__icon {
-    fill: #ffffff;
-    height: 30px;
-    margin-left: 25px;
-    width: 30px;
-  }
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: #111111;
+  box-sizing: border-box;
+  min-height: 100%;
+  overflow-y: scroll;
+  position: relative;
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+}
+
+body {
+  color: #ffffff;
+  font: 1rem/1.5 "Patua One", serif;
+  margin: 0 auto;
+  width: 85%;
+}
+
+a {
+  color: #eb611c;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+.site-content {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  min-height: -webkit-fill-available; /* Fix for iOS 100vh bug */
+}
+
+.site-title {
+  animation: intro 0.5s ease-in-out 0.5s 1 normal forwards running;
+  font-size: 5vmax;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  opacity: 0;
+  text-transform: uppercase;
+}
+
+.site-footer {
+  align-items: flex-end;
+  bottom: 25px;
+  display: flex;
+  position: fixed;
+  right: 25px;
+}
+
+.footer__link {
+  transform: translateY(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+.footer__link:hover {
+  transform: translateY(-2px);
+}
+
+.footer__icon {
+  fill: #ffffff;
+  height: 30px;
+  margin-left: 25px;
+  width: 30px;
+}
