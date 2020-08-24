@@ -14,13 +14,12 @@ const Home = () => {
   return (
     <>
       <Content>
-          <Title>
-            Hey! <br />
-            My name is <span style={{ color: "#F7F052" }}>Jonathan</span>. <br />
-            I'm a <span style={{ color: "#3AB795" }}>front-end developer</span>. <br />
-            Based in <span style={{ color: "#5BC0EB" }}>Gothenburg</span>. <br />
-            Building stuff at <a href="https://maverickbysigma.se">Maverick</a>.
-          </Title>
+        <Title>
+          Hey! <br />
+          My name is <span style={{ color: "#F7F052" }}>Jonathan</span>. <br />
+          I'm a <span style={{ color: "#3AB795" }}>front-end developer</span>. <br />
+          Based in <span style={{ color: "#5BC0EB" }}>Gothenburg</span>.
+        </Title>
       </Content>
 
       <Footer>
