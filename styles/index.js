@@ -47,11 +47,11 @@ export const Content = styled.section`
     background-color: #ffffff;
     border-radius: 6px;
     box-shadow: 0px 24px 30px 0px #1b364a09;
-    padding-bottom: 50px;
-    padding-top: 50px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 50px 70px;
     position: relative;
     text-align: center;
-    width: 30vw;
     z-index: 2;
 `;
 
