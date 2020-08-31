@@ -20,7 +20,7 @@ export default createGlobalStyle`
   html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: #929aa7;
+    background-color: #6e7dab;
     box-sizing: border-box;
     min-height: 100%;
     overflow-y: scroll;
