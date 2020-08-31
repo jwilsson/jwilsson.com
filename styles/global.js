@@ -2,12 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   @font-face {
-    font-display: block;
-    font-family: 'Patua One';
+    font-family: 'Source Sans Pro';
     font-style: normal;
-    font-weight: 400;
-    src: local('Patua One'), local('PatuaOne-Regular'),
-        url('/fonts/patua-one-v10-regular.woff2') format('woff2');
+    font-weight: 300;
+    src: local('Source Sans Pro Light'), local('SourceSansPro-Light'),
+      url('/fonts/source-sans-pro-v13-light.woff2') format('woff2');
   }
 
   /* stylelint-disable selector-max-universal */
@@ -21,7 +20,7 @@ export default createGlobalStyle`
   html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: #111111;
+    background-color: #929aa7;
     box-sizing: border-box;
     min-height: 100%;
     overflow-y: scroll;
@@ -32,25 +31,20 @@ export default createGlobalStyle`
 
   body {
     color: #ffffff;
-    font: 1rem/1.5 "Patua One", serif;
+    font: 300 1rem/1.5 "Source Sans Pro", sans-serif;
     margin: 0 auto;
-    width: 85%;
-  }
-
-  a {
-    color: #eb611c;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-  }
-
-  a:hover {
-    color: #ffffff;
   }
 
   .footer__icon {
-    fill: #ffffff;
+    fill: #6e7dab;
     height: 30px;
-    margin-left: 25px;
+    margin-left: 12px;
+    margin-right: 12px;
+    transition: fill 0.25s ease;
     width: 30px;
+
+    &:hover {
+      fill: #575366;
+    }
   }
-`
+`;
