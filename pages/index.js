@@ -8,7 +8,7 @@ import {
 } from '../styles/index.js';
 
 export const config = {
-  unstable_runtimeJS: false
+  unstable_runtimeJS: false,
 };
 
 const Home = () => {

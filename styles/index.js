@@ -33,7 +33,7 @@ export const Wrapper = styled.main`
         animation: ${fadeIn} 1s ease-in-out 0s 1 normal forwards running;
         background-image: linear-gradient(-40deg, #575366 0%, #6e7dab 50%, #d1e3dd 100%);
         bottom: 0;
-        content: "";
+        content: '';
         left: 0;
         position: absolute;
         right: 0;
@@ -80,7 +80,7 @@ export const Footer = styled.footer`
 
     &::before {
         background-color: #e4ebf0;
-        content: "";
+        content: '';
         height: 1px;
         left: 10%;
         position: absolute;
