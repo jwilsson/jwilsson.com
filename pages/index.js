@@ -16,7 +16,7 @@ const Home = () => {
     <Wrapper>
       <Content>
         <Title>Jonathan Wilsson</Title>
-        <Subtitle>Front-End Developer</Subtitle>
+        <Subtitle as="h2">Front-End Developer</Subtitle>
 
         <Footer>
           <a href="https://github.com/jwilsson">

@@ -23,15 +23,13 @@ export default createGlobalStyle`
     background-color: #6e7dab;
     box-sizing: border-box;
     min-height: 100%;
-    overflow-y: scroll;
     position: relative;
-    scroll-behavior: smooth;
     text-size-adjust: 100%;
   }
 
   body {
-    color: #ffffff;
-    font: 300 1rem/1.5 "Source Sans Pro", sans-serif;
+    color: #6e7dab;
+    font: 300 1rem/1.25 "Source Sans Pro", sans-serif;
     margin: 0 auto;
   }
 

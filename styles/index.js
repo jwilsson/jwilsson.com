@@ -46,7 +46,7 @@ export const Content = styled.section`
     animation: ${fadeSlide} 1s ease-in-out 0s 1 normal forwards running;
     background-color: #ffffff;
     border-radius: 6px;
-    box-shadow: 0px 24px 30px 0px #1b364a09;
+    box-shadow: 0 24px 30px 0 #1b364a09;
     margin-left: 5vw;
     margin-right: 5vw;
     padding: 50px 70px;
@@ -56,19 +56,14 @@ export const Content = styled.section`
 `;
 
 export const Title = styled.h1`
-    color: #6e7dab;
     font-size: 2.5em;
     font-weight: 300;
-    line-height: 1.25;
-    margin-bottom: 0;
+    margin-bottom: 1.25rem;
     margin-top: 0;
 `;
 
-export const Subtitle = styled.h2`
-    color: #6e7dab;
+export const Subtitle = styled(Title)`
     font-size: 1.5rem;
-    font-weight: 300;
-    line-height: 1.5;
 `;
 
 export const Footer = styled.footer`
