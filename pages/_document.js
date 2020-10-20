@@ -39,6 +39,7 @@ class CustomDocument extends Document {
           <meta name="description" content="I'm Jonathan, a front-end developer from Gothenburg" />
 
           <link rel="preload" href="/fonts/source-sans-pro-v13-light.woff2" as="font" crossOrigin="anonymous" />
+          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
           {styleTags}
         </Head>
