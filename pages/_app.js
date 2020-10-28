@@ -8,6 +8,8 @@ const App = ({ Component, pageProps }) => {
       <GlobalStyle />
 
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <title>Jonathan Wilsson - Front-end developer</title>
       </Head>
 
