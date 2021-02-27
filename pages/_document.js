@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
-import { ServerStyleSheet } from 'styled-components';
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 
 class CustomDocument extends Document {
   static async getInitialProps(ctx) {
@@ -7,9 +7,20 @@ class CustomDocument extends Document {
     const originalRenderPage = ctx.renderPage;
 
     try {
+      const enhanceApp = (App) => (props) => {
+        return (
+          <StyleSheetManager
+            disableVendorPrefixes
+            sheet={sheet.instance}
+          >
+            <App {...props} />
+          </StyleSheetManager>
+        );
+      };
+
       ctx.renderPage = () => {
         return originalRenderPage({
-          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+          enhanceApp,
         });
       };
 
