@@ -3,19 +3,22 @@ import Head from 'next/head';
 import GlobalStyle from '../styles/global';
 
 const App = ({ Component, pageProps }) => {
-  return (
-    <>
-      <GlobalStyle />
+    return (
+        <>
+            <GlobalStyle />
 
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <Head>
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
 
-        <title>Jonathan Wilsson - Front-end developer</title>
-      </Head>
+                <title>Jonathan Wilsson - Front-end developer</title>
+            </Head>
 
-      <Component {...pageProps} />
-    </>
-  );
+            <Component {...pageProps} />
+        </>
+    );
 };
 
 export default App;

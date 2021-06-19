@@ -31,7 +31,12 @@ export const Wrapper = styled.main`
 
     &::after {
         animation: ${fadeIn} 1s ease-in-out 0s 1 normal forwards running;
-        background-image: linear-gradient(-40deg, #575366 0%, #6e7dab 50%, #d1e3dd 100%);
+        background-image: linear-gradient(
+            -40deg,
+            #575366 0%,
+            #6e7dab 50%,
+            #d1e3dd 100%
+        );
         bottom: 0;
         content: '';
         left: 0;
