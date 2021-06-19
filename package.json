@@ -25,7 +25,7 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*.js": "prettier --write lib test"
+    "*.js": "prettier --write pages styles"
   },
   "babel": {
     "presets": [
