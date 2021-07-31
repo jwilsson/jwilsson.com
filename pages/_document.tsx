@@ -1,26 +1,32 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
+import Document, {
+    DocumentContext,
+    Head,
+    Html,
+    Main,
+    NextScript,
+} from 'next/document';
 
 class CustomDocument extends Document {
-    static async getInitialProps(ctx) {
-        const sheet = new ServerStyleSheet();
+    static async getInitialProps(ctx: DocumentContext) {
         const originalRenderPage = ctx.renderPage;
+        const sheet = new ServerStyleSheet();
 
         try {
-            const enhanceApp = (App) => (props) => {
-                return (
-                    <StyleSheetManager
-                        disableVendorPrefixes
-                        sheet={sheet.instance}
-                    >
-                        <App {...props} />
-                    </StyleSheetManager>
-                );
-            };
-
             ctx.renderPage = () => {
                 return originalRenderPage({
-                    enhanceApp,
+                    enhanceApp: (App) => {
+                        return (props) => {
+                            return (
+                                <StyleSheetManager
+                                    disableVendorPrefixes
+                                    sheet={sheet.instance}
+                                >
+                                    <App {...props} />
+                                </StyleSheetManager>
+                            );
+                        };
+                    },
                 });
             };
 
@@ -28,12 +34,7 @@ class CustomDocument extends Document {
 
             return {
                 ...initialProps,
-                styles: (
-                    <>
-                        {initialProps.styles}
-                        {sheet.getStyleElement()}
-                    </>
-                ),
+                styles: sheet.getStyleElement(),
             };
         } finally {
             sheet.seal();
@@ -41,8 +42,6 @@ class CustomDocument extends Document {
     }
 
     render() {
-        const { styleTags } = this.props;
-
         return (
             <Html lang="en">
                 <Head>
@@ -57,9 +56,8 @@ class CustomDocument extends Document {
                         as="font"
                         crossOrigin="anonymous"
                     />
-                    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-                    {styleTags}
+                    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
                 </Head>
 
                 <body>

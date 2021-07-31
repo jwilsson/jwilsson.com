@@ -5,7 +5,7 @@ import {
     Subtitle,
     Title,
     Wrapper,
-} from '../styles/index.js';
+} from '../styles/';
 
 /* eslint-disable babel/camelcase */
 export const config = {
