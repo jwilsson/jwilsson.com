@@ -8,7 +8,7 @@ import Document, {
 } from 'next/document';
 
 class CustomDocument extends Document {
-    static async getInitialProps(ctx: DocumentContext) {
+    static override async getInitialProps(ctx: DocumentContext) {
         const originalRenderPage = ctx.renderPage;
         const sheet = new ServerStyleSheet();
 
@@ -41,7 +41,7 @@ class CustomDocument extends Document {
         }
     }
 
-    render() {
+    override render() {
         return (
             <Html lang="en">
                 <Head>
