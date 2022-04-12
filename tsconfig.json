@@ -7,13 +7,14 @@
     "jsx": "preserve",
     "noEmit": true,
     "resolveJsonModule": true,
+    "module": "esnext"
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx",
+    "**/*.tsx"
   ],
   "exclude": [
-    "node_modules",
+    "node_modules"
   ]
 }
