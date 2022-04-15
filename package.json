@@ -1,58 +1,60 @@
 {
-  "name": "jwilsson.com",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "^12.0.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "styled-components": "^5.1.1"
-  },
-  "devDependencies": {
-    "@jwilsson/eslint-config-prettier": "^7.2.0",
-    "@jwilsson/eslint-config-react": "^7.2.0",
-    "@jwilsson/prettier-config": "^7.2.0",
-    "@jwilsson/tsconfig": "^1.1.0",
-    "@types/node": "^17.0.23",
-    "@types/react": "^18.0.1",
-    "@types/styled-components": "^5.1.11",
-    "eslint": "^8.1.0",
-    "eslint-config-next": "^12.0.0",
-    "prettier": "^2.3.1",
-    "simple-git-hooks": "^2.4.1",
-    "typescript": "^4.4.2"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint pages styles",
-      "prettier --write pages styles"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "next/babel"
-    ],
-    "plugins": [
-      "babel-plugin-styled-components"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "@jwilsson/eslint-config-react",
-      "@jwilsson/eslint-config-prettier",
-      "eslint-config-next"
-    ],
-    "rules": {
-      "react/display-name": "off",
-      "react/require-optimization": "off"
-    }
-  },
-  "prettier": "@jwilsson/prettier-config"
+    "name": "jwilsson.com",
+    "version": "1.0.0",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start"
+    },
+    "dependencies": {
+        "next": "^12.0.0",
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0",
+        "styled-components": "^5.1.1"
+    },
+    "devDependencies": {
+        "@jwilsson/eslint-config-prettier": "^7.2.0",
+        "@jwilsson/eslint-config-react": "^7.2.0",
+        "@jwilsson/eslint-config-typescript": "^7.2.0",
+        "@jwilsson/prettier-config": "^7.2.0",
+        "@jwilsson/tsconfig": "^1.1.0",
+        "@types/node": "^17.0.23",
+        "@types/react": "^18.0.1",
+        "@types/styled-components": "^5.1.11",
+        "eslint": "^8.1.0",
+        "eslint-config-next": "^12.0.0",
+        "prettier": "^2.3.1",
+        "simple-git-hooks": "^2.4.1",
+        "typescript": "^4.4.2"
+    },
+    "simple-git-hooks": {
+        "pre-commit": "npx lint-staged"
+    },
+    "lint-staged": {
+        "*.js": [
+            "eslint pages styles",
+            "prettier --write pages styles"
+        ]
+    },
+    "babel": {
+        "presets": [
+            "next/babel"
+        ],
+        "plugins": [
+            "babel-plugin-styled-components"
+        ]
+    },
+    "eslintConfig": {
+        "extends": [
+            "@jwilsson/eslint-config-typescript",
+            "@jwilsson/eslint-config-react",
+            "@jwilsson/eslint-config-prettier",
+            "eslint-config-next"
+        ],
+        "rules": {
+            "react/display-name": "off",
+            "react/require-optimization": "off"
+        }
+    },
+    "prettier": "@jwilsson/prettier-config"
 }
