@@ -1,11 +1,11 @@
-import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 import Document, {
-    DocumentContext,
     Head,
     Html,
     Main,
     NextScript,
+    type DocumentContext,
 } from 'next/document';
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
 
 class CustomDocument extends Document {
     static override async getInitialProps(ctx: DocumentContext) {
