@@ -36,14 +36,6 @@
             "prettier --write pages styles"
         ]
     },
-    "babel": {
-        "presets": [
-            "next/babel"
-        ],
-        "plugins": [
-            "babel-plugin-styled-components"
-        ]
-    },
     "eslintConfig": {
         "extends": [
             "@jwilsson/eslint-config-typescript",
