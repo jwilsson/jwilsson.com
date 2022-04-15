@@ -31,9 +31,9 @@
         "pre-commit": "npx lint-staged"
     },
     "lint-staged": {
-        "*.js": [
-            "eslint pages styles",
-            "prettier --write pages styles"
+        "*.ts, *.tsx": [
+            "eslint --fix",
+            "prettier --write"
         ]
     },
     "eslintConfig": {
