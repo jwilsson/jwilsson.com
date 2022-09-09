@@ -5,7 +5,7 @@ import Document, {
     NextScript,
     type DocumentContext,
 } from 'next/document';
-import { ServerStyleSheet, StyleSheetManager } from 'styled-components';
+import { ServerStyleSheet } from 'styled-components';
 
 class CustomDocument extends Document {
     static override async getInitialProps(ctx: DocumentContext) {
@@ -13,28 +13,17 @@ class CustomDocument extends Document {
         const sheet = new ServerStyleSheet();
 
         try {
-            ctx.renderPage = () => {
-                return originalRenderPage({
-                    enhanceApp: (App) => {
-                        return (props) => {
-                            return (
-                                <StyleSheetManager
-                                    disableVendorPrefixes
-                                    sheet={sheet.instance}
-                                >
-                                    <App {...props} />
-                                </StyleSheetManager>
-                            );
-                        };
-                    },
+            ctx.renderPage = () =>
+                originalRenderPage({
+                    enhanceApp: (App) => (props) =>
+                        sheet.collectStyles(<App {...props} />),
                 });
-            };
 
             const initialProps = await Document.getInitialProps(ctx);
 
             return {
                 ...initialProps,
-                styles: sheet.getStyleElement(),
+                styles: [initialProps.styles, sheet.getStyleElement()],
             };
         } finally {
             sheet.seal();
