@@ -1,3 +1,4 @@
+import type { FC } from 'react';
 import {
     Content,
     Footer,
@@ -7,13 +8,13 @@ import {
     Wrapper,
 } from '../styles/';
 
-/* eslint-disable babel/camelcase */
+/* eslint-disable camelcase */
 export const config = {
     unstable_runtimeJS: false,
 };
-/* eslint-enable babel/camelcase */
+/* eslint-enable camelcase */
 
-const Home = () => {
+const Home: FC = () => {
     return (
         <Wrapper>
             <Content>

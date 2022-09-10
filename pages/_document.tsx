@@ -4,16 +4,19 @@ import Document, {
     Main,
     NextScript,
     type DocumentContext,
+    type DocumentInitialProps,
 } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 class CustomDocument extends Document {
-    static override async getInitialProps(ctx: DocumentContext) {
+    public static override async getInitialProps(
+        ctx: DocumentContext,
+    ): Promise<DocumentInitialProps> {
         const originalRenderPage = ctx.renderPage;
         const sheet = new ServerStyleSheet();
 
         try {
-            ctx.renderPage = () =>
+            ctx.renderPage = (): ReturnType<typeof originalRenderPage> =>
                 originalRenderPage({
                     enhanceApp: (App) => (props) =>
                         sheet.collectStyles(<App {...props} />),
@@ -30,7 +33,7 @@ class CustomDocument extends Document {
         }
     }
 
-    override render() {
+    public override render(): JSX.Element {
         return (
             <Html lang="en">
                 <Head>

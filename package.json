@@ -38,10 +38,23 @@
     },
     "eslintConfig": {
         "extends": [
-            "@jwilsson/eslint-config-typescript",
             "@jwilsson/eslint-config-react",
+            "@jwilsson/eslint-config-typescript",
             "@jwilsson/eslint-config-prettier",
             "eslint-config-next"
+        ],
+        "overrides": [
+            {
+                "files": [
+                    "*.ts",
+                    "*.tsx"
+                ],
+                "parserOptions": {
+                    "project": [
+                        "./tsconfig.json"
+                    ]
+                }
+            }
         ],
         "rules": {
             "react/display-name": "off",
