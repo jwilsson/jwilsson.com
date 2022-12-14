@@ -1,7 +1,4 @@
 module.exports = {
-    compiler: {
-        styledComponents: true,
-    },
-    reactStrictMode: true,
-    swcMinify: true,
+  reactStrictMode: true,
+  swcMinify: true,
 };

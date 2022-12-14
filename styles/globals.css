@@ -1,0 +1,23 @@
+@tailwind base;
+@layer base {
+    @font-face {
+        font-family: 'Source Sans Pro';
+        font-style: normal;
+        font-weight: 300;
+        src: local('Source Sans Pro Light'), local('SourceSansPro-Light'),
+            url('/fonts/source-sans-pro-v13-light.woff2') format('woff2');
+    }
+
+    .wrapper {
+        background-image: linear-gradient(-40deg, #575366 0%, #6e7dab 50%, #d1e3dd 100%);
+    }
+}
+
+@tailwind components;
+@layer components {
+    .footer-icon {
+        @apply fill-primary h-8 w-8 mx-3 transition-all duration-300 hover:fill-hover;
+    }
+}
+
+@tailwind utilities;
