@@ -1,12 +1,5 @@
 import type { FC } from 'react';
-import {
-    Content,
-    Footer,
-    FooterLabel,
-    Subtitle,
-    Title,
-    Wrapper,
-} from '../styles/';
+import { Content, Footer, Subtitle, Title, Wrapper } from '../styles/';
 
 /* eslint-disable camelcase */
 export const config = {
@@ -23,9 +16,8 @@ const Home: FC = () => {
 
                 <Footer>
                     <a href="https://github.com/jwilsson">
-                        <FooterLabel>GitHub</FooterLabel>
-
                         <svg
+                            aria-label="GitHub"
                             className="footer__icon"
                             role="img"
                             viewBox="0 0 24 24"
@@ -36,9 +28,8 @@ const Home: FC = () => {
                     </a>
 
                     <a href="https://www.linkedin.com/in/jwilsson">
-                        <FooterLabel>LinkedIn</FooterLabel>
-
                         <svg
+                            aria-label="LinkedIn"
                             className="footer__icon"
                             role="img"
                             viewBox="0 0 24 24"

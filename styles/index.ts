@@ -88,13 +88,3 @@ export const Footer = styled.footer`
         top: 0;
     }
 `;
-
-/* Hide labels but not for screen readers */
-export const FooterLabel = styled.span`
-    clip: rect(1px, 1px, 1px, 1px);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-`;
