@@ -1,19 +1,21 @@
 {
   "extends": "@jwilsson/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "allowJs": false,
-    "incremental": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "module": "esnext"
+      "allowJs": false,
+      "incremental": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "noEmit": true,
+      "resolveJsonModule": true,
+      "module": "esnext",
+      "strict": true,
+      "plugins": [
+          {
+              "name": "next"
+          }
+      ]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": [
     "node_modules"
   ]

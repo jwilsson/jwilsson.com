@@ -1,5 +1,5 @@
 module.exports = {
-    content: ['./pages/**/*.{ts,tsx}'],
+    content: ['./app/**/*.{ts,tsx}'],
     theme: {
         extend: {
             colors: {

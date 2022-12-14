@@ -8,7 +8,7 @@
             url('/fonts/source-sans-pro-v13-light.woff2') format('woff2');
     }
 
-    .wrapper {
+    body {
         background-image: linear-gradient(-40deg, #575366 0%, #6e7dab 50%, #d1e3dd 100%);
     }
 }
