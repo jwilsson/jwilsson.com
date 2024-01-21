@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import { FC } from 'react';
 
 const Head: FC = () => (
     <>
@@ -9,7 +9,6 @@ const Head: FC = () => (
         <title>Jonathan Wilsson - Front-end developer</title>
 
         <link rel="preload" href="/fonts/source-sans-pro-v13-light.woff2" as="font" crossOrigin="anonymous" />
-
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     </>
 );

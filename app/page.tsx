@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import { FC } from 'react';
 
 const Page: FC = () => (
     <main className="flex items-center justify-center h-screen text-primary relative animate-fade-slide">
