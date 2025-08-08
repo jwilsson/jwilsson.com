@@ -28,7 +28,7 @@
         "typescript": "^5.9.2"
     },
     "engines": {
-        "node": "^24.5.0"
+        "node": "^22.0.0"
     },
     "simple-git-hooks": {
         "pre-commit": "npx lint-staged"
