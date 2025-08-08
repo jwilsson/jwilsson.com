@@ -1,4 +1,4 @@
-import Metadata from 'next';
+import { Metadata } from 'next';
 import { FC, PropsWithChildren } from 'react';
 import './globals.css';
 

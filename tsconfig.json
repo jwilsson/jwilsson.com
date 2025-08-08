@@ -8,6 +8,7 @@
       "noEmit": true,
       "resolveJsonModule": true,
       "module": "esnext",
+      "moduleResolution": "bundler",
       "strict": true,
       "plugins": [
           {
