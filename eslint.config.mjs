@@ -5,6 +5,8 @@ const compat = new FlatCompat({
     baseDirectory: import.meta.dirname,
 });
 
-const eslintConfig = [...jwilsson.default, ...jwilsson.typescript, ...compat.extends('next')];
+const eslintConfig = [...compat.extends("next/core-web-vitals", "next/typescript"), {
+    ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"]
+}, ...jwilsson.default, ...jwilsson.typescript, ...compat.extends('next')];
 
 export default eslintConfig;
